@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<channel_map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="schema/channel_map.xsd">
+
+  <!--________________________________________________________________-->
+  <DAQNode node_id="1" name="k18eb">
+    <!--________________________________________________________________-->
+    <VmeMaster node_id="1" name="vme01">
+      <VmeCaenV792 address="0xad030000">
+	<for var="ch" from="0" to="31">
+	  <FE ch="ch"><D Device="CaenV792" segment="ch" ch="0" data="0"/></FE>
+	</for>
+      </VmeCaenV792>
+    </VmeMaster>
+  </DAQNode>
+</channel_map>
