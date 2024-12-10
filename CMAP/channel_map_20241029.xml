@@ -9,9 +9,15 @@
     <VmeMaster node_id="1" name="vme01">
       <VmeCaenV792 address="0xad030000">
 	<for var="ch" from="0" to="31">
-	  <FE ch="ch"><D Device="CaenV792" segment="ch" ch="0" data="0"/></FE>
+	  <FE ch="ch"><D Device="HODO" segment="ch" ch="0" data="0"/></FE>
 	</for>
       </VmeCaenV792>
     </VmeMaster>
+    <!-- _____________________________________________________________-->
+    <HulHRTdc node_id="1542" name="hul01hr-1">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="3">
+	<FE ch="ch" data="data"><D Device="HODO" segment="ch" ch="0" data="data + 1"/>
+      </FE></for></for>
+    </HulHRTdc>
   </DAQNode>
 </channel_map>
