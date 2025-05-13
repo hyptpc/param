@@ -3,21 +3,21 @@
 	  xsi:noNamespaceSchemaLocation="schema/unpacker.xsd">
 
   <control>
-    <skip>        0        </skip>
+    <skip>        0         </skip>
     <max_loop>    -1        </max_loop>
     <cout>        std::cout </cout>
     <cerr>        std::cerr </cerr>
     <tout>        std::cerr </tout>
-    <esc>         off       </esc>
-    <print_cycle> 10000       </print_cycle>
+    <esc>         on        </esc>
+    <print_cycle> 10000     </print_cycle>
 
     <error_check>
       <format check="true"/>
       <slip check="false"/>
       <disagreement
        	 local="true"
-	 event="false"
-	 spill="false"/>
+	 event="true"
+	 spill="true"/>
       <show
 	  all="true"
 	  always="false"
