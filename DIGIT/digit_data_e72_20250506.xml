@@ -469,7 +469,28 @@
     </plane></for>
   </device>
   <!--________________________________________________________________-->
-  <device id="112" name="T1"><for var="seg" from="0" to="4">
+  <device id="20" name="BVH"><for var="seg" from="0" to="3">
+    <segment id="seg"><for var="UorD" from="0" to="0">
+      <ch id="UorD">
+        <data id="0" name="leading"/>
+        <data id="1" name="trailing"/>
+      </ch></for>
+    </segment></for>
+  </device>
+  <!--________________________________________________________________-->
+  <device id="21" name="T1"><for var="seg" from="0" to="3">
+    <segment id="seg"><for var="UorD" from="0" to="1">
+      <ch id="UorD">
+        <data id="0" name="adc"/>
+        <data id="1" name="leading"/>
+        <data id="2" name="trailing"/>
+	<data id="3" name="commonstop"/>
+	<data id="4" name="overflow"/>
+      </ch></for>
+    </segment></for>
+  </device>
+  <!--________________________________________________________________-->
+  <device id="22" name="T2"><for var="seg" from="0" to="3">
     <segment id="seg"><for var="UorD" from="0" to="1">
       <ch id="UorD">
         <data id="0" name="adc"/>
