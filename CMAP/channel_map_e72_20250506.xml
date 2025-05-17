@@ -112,11 +112,10 @@
     	<FE ch="21"><D Device="HTOF" segment="19" ch="1" data="0"/></FE>
     	<FE ch="22"><D Device="HTOF" segment="20" ch="1" data="0"/></FE>
     	<FE ch="23"><D Device="HTOF" segment="21" ch="1" data="0"/></FE>
-    	<FE ch="24"><D Device="HTOF" segment="19" ch="2" data="0"/></FE>
-    	<FE ch="25"><D Device="HTOF" segment="20" ch="2" data="0"/></FE>
+    	<FE ch="25"><D Device="HTOF" segment="19" ch="2" data="0"/></FE>
+    	<FE ch="24"><D Device="HTOF" segment="20" ch="2" data="0"/></FE>
     	<FE ch="26"><D Device="null"/></FE>
     	<FE ch="27"><D Device="null"/></FE>
-    	<FE ch="28"><D Device="null"/></FE>
     	<FE ch="28"><D Device="null"/></FE>
     	<FE ch="29"><D Device="null"/></FE>
     	<FE ch="30"><D Device="null"/></FE>
@@ -158,18 +157,27 @@
   	<FE ch="30" data="data"><D Device="TriggerFlag" segment="3" data="data + 1"/></FE>
   	<FE ch="31" data="data"><D Device="TriggerFlag" segment="25" data="data + 1"/></FE>
     	<FE ch="32" data="data"><D Device="BAC" segment="4" ch="0" data="data + 1"/></FE>
-    	<FE ch="33" data="data"><D Device="KVC2" segment="0" ch="4" data="data + 1"/></FE>
-    	<FE ch="34" data="data"><D Device="KVC2" segment="1" ch="4" data="data + 1"/></FE>
-    	<FE ch="35" data="data"><D Device="KVC2" segment="2" ch="4" data="data + 1"/></FE>
-    	<FE ch="36" data="data"><D Device="KVC2" segment="3" ch="4" data="data + 1"/></FE>
+    	<!-- <FE ch="33" data="data"><D Device="KVC2" segment="0" ch="4" data="data + 1"/></FE> -->
+    	<!-- <FE ch="34" data="data"><D Device="KVC2" segment="1" ch="4" data="data + 1"/></FE> -->
+    	<!-- <FE ch="35" data="data"><D Device="KVC2" segment="2" ch="4" data="data + 1"/></FE> -->
+    	<!-- <FE ch="36" data="data"><D Device="KVC2" segment="3" ch="4" data="data + 1"/></FE> -->
+    	<FE ch="33" data="data"><D Device="null"/></FE>
+    	<FE ch="34" data="data"><D Device="null"/></FE>
+    	<FE ch="35" data="data"><D Device="null"/></FE>
+    	<FE ch="36" data="data"><D Device="null"/></FE>
     	<FE ch="37" data="data"><D Device="KVC1" segment="0" ch="2" data="data + 1"/></FE>
     	<FE ch="38" data="data"><D Device="KVC1" segment="1" ch="2" data="data + 1"/></FE>
     	<FE ch="39" data="data"><D Device="KVC1" segment="2" ch="2" data="data + 1"/></FE>
-    	<FE ch="40" data="data"><D Device="KVC1" segment="3" ch="2" data="data + 1"/></FE>
-    	<FE ch="41" data="data"><D Device="SAC" segment="8" ch="0" data="data + 1"/></FE>
-	<for var="ch" from="42" to="47">
-    	  <FE ch="ch" data="data"><D Device="null"/></FE>
-	</for>
+    	<!-- <FE ch="40" data="data"><D Device="KVC1" segment="3" ch="2" data="data + 1"/></FE> -->
+    	<FE ch="40" data="data"><D Device="null"/></FE>
+    	<FE ch="41" data="data"><D Device="null"/></FE>
+    	<!-- <FE ch="41" data="data"><D Device="SAC" segment="8" ch="0" data="data + 1"/></FE> -->
+    	<FE ch="42" data="data"><D Device="KVC1" segment="3" ch="2" data="data + 1"/></FE>
+    	<FE ch="43" data="data"><D Device="KVC2" segment="0" ch="4" data="data + 1"/></FE>
+    	<FE ch="44" data="data"><D Device="KVC2" segment="1" ch="4" data="data + 1"/></FE>
+    	<FE ch="45" data="data"><D Device="KVC2" segment="2" ch="4" data="data + 1"/></FE>
+    	<FE ch="46" data="data"><D Device="KVC2" segment="3" ch="4" data="data + 1"/></FE>
+    	<FE ch="47" data="data"><D Device="SAC" segment="8" ch="0" data="data + 1"/></FE>
 	<for var="ch" from="0" to="14">
   	  <FE ch="ch + 48" data="data"><D Device="TriggerFlag" segment="ch + 4" data="data + 1"/></FE>
 	</for>
