@@ -7,7 +7,7 @@
     <max_loop>    -1        </max_loop>
     <cout>        std::cout </cout>
     <cerr>        /dev/null </cerr>
-    <tout>        std::cout </tout>
+    <tout>        /tmp/tag.txt </tout>
     <esc>         off       </esc>
     <print_cycle> -1       </print_cycle>
 
@@ -15,9 +15,9 @@
       <format check="true"/>
       <slip check="false"/>
       <disagreement
-       	 local="false"
-	 event="false"
-	 spill="false"/>
+       	 local="true"
+	 event="true"
+	 spill="true"/>
       <show
 	  all="true"
 	  always="false"
