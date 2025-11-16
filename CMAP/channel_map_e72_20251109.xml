@@ -222,9 +222,10 @@
     <!--________________________________________________________________ -->
     <HulHRTdc node_id="1661" name="hul-hrtdc-125">
       <for var="data" from="0" to="3">
+	<FE ch="0" data="data"><D Device="null"/></FE>
 	<!-- null -->
 	<for var="ch" from="32" to="63">
-	  <FE ch="ch" data="data"><D Device="null"/></FE>
+	  <FE ch="ch" data="data"><D Device="TriggerFlag" segment="ch - 32" data="data + 1"/></FE>
     	</for>
       </for>
     </HulHRTdc>
