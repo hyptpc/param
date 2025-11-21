@@ -45,7 +45,7 @@
     </segment></for>
   </device>
   <!--________________________________________________________________-->
-  <device id="2" name="BH2"><for var="seg" from="0" to="7">
+  <device id="2" name="BH2"><for var="seg" from="0" to="14">
     <segment id="seg"><for var="UorD" from="0" to="1">
       <ch id="UorD">
         <data id="0" name="adc"/>
