@@ -1,5 +1,5 @@
 #
-#	UserParam_e72_tpc_0
+#	UserParam_e72_tpctracking_0
 #
 
 
@@ -7,6 +7,8 @@
 
 ###	TPC
 MinLayerTPC	8
+BeamThroughTPC 		0
+ExclusiveTracking 	0
 
 ###	TPCHit
 BaselineCorrectionTPC	1
@@ -17,6 +19,34 @@ MinRmsTPC	10
 MinBaseRmsTPC	10
 TimeBucketTPC	15	150
 NumOfTimeBucket	170
+
+### TPC Clustering cut
+MaxYDifClusterTPC 10
+MinClusterDeTPC 90
+MinClusterSizeTPC 1
+MaxClusterYPosTPC 3000
+MinClusterYPosTPC -2500
+
+### TPC Hough Window cut
+MaxHoughWindow 10
+MaxHoughWindowY 10
+
+#VertexScanRange 50
+VertexScanRange 100
+
+### TPC resolution parameter
+### at 1T
+TPC_Dt 0.18
+### at 0T
+#TPC_Dt 0.57
+### HIMAC val
+TPC_sigma0 0.204
+### tmp val
+#TPC_sigma0 0.7
+### TPC Momentum resolution scale
+MomResScale 1.35
+dZResScale 1.5
+PhiResScale 1
 
 #______________________________________________________________________________
 #	HodoTDC	min	max
