@@ -85,8 +85,10 @@
 	</for>
 	<!-- T1 -->
     	<FE ch="8"><D Device="T1" segment="0" ch="0" data="0"/></FE>
+	<!-- T2 -->
+    	<FE ch="9"><D Device="T2" segment="0" ch="0" data="0"/></FE>
 	<!-- null -->
-	<for var="ch" from="9" to="31">
+	<for var="ch" from="10" to="31">
 	  <FE ch="ch"><D Device="null"/></FE>
 	</for>
       </VmeCaenV792>
@@ -152,9 +154,11 @@
     	<FE ch="9" data="data"><D Device="BAC" segment="4" ch="0" data="data + 1"/></FE>
 	<!-- SAC3 SUM -->
     	<FE ch="10" data="data"><D Device="SAC3" segment="0" ch="0" data="data + 1"/></FE>
+	<!-- T2 -->
+	<FE ch="11" data="data"><D Device="T2" segment="0" ch="0" data="data + 1"/></FE>
 	<!-- null -->
 	<FE ch="0" data="data"><D Device="null"/></FE>    
-	<for var="ch" from="11" to="15">
+	<for var="ch" from="12" to="15">
 	  <FE ch="ch" data="data"><D Device="null"/></FE>    
     	</for>
 	<!-- HTOF UP -->
@@ -187,9 +191,10 @@
 	<for var="ch" from="24" to="31">
 	  <FE ch="ch" data="data"><D Device="null"/></FE>    
     	</for>
-	<for var="ch" from="62" to="63">
-	  <FE ch="ch" data="data"><D Device="null"/></FE>    
-    	</for>	
+	<!-- null -->
+	<FE ch="62" data="data"><D Device="null"/></FE>
+	<!-- T3  -->
+	<FE ch="63" data="data"><D Device="T3" segment="0" ch="0" data="data+1"/></FE>
       </for>
     </HulHRTdc>
     <!--________________________________________________________________ -->
@@ -413,7 +418,27 @@
     	<FE ch="ch" data="data"><D Device="BLC2b" plane="0" ch="127 - ch" data="data"/></FE>
       </for></for>
     </HulMHTdc>
-
+    
+    <!--SCH ________________________________________________________________-->
+    <Easiroc node_id="0xea00" name="easiroc0">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data"><D Device="SCH" segment="15 - ch" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data"><D Device="SCH" segment="47 - ch" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    
+    <!--SCH ________________________________________________________________-->
+    <Easiroc node_id="0xea01" name="easiroc1">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data"><D Device="SCH" segment="47 - ch" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data"><D Device="SCH" segment="79 - ch" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    
     <!--________________________________________________________________-->
     <GetCoBoMaster node_id="0xcb0" name="cobo0">
       <GetAsAd address="0">
