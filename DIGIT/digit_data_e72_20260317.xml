@@ -151,14 +151,14 @@
     </segment></for>
   </device>
   <!--________________________________________________________________-->
-  <device id="13" name="SCH" type="Hodo"><for var="seg" from="0" to="63">
-      <segment id="seg"><for var="UorD" from="0" to="0">
+  <device id="13" name="SCH" type="Fiber"><for var="seg" from="0" to="63">
+      <segment id="seg"><for var="UorD" from="0" to="1">
 	  <ch id="UorD">
-            <data id="0" name="adc"/>
-            <data id="1" name="leading"/>
-            <data id="2" name="trailing"/>
-	    <data id="3" name="commonstop"/>
-	    <data id="4" name="overflow"/>
+           <!-- <data id="0" name="highgain"/>-->
+            <data id="0" name="leading"/>
+            <data id="1" name="trailing"/>
+	    <data id="2" name="commonstop"/>
+	    <data id="3" name="overflow"/>
 	</ch></for>
     </segment></for>
   </device>
